@@ -1,0 +1,10 @@
+<div ui-sortable ng-model="dc.cards" class="col-md-8">
+  <div class="col-md-4" ng-repeat="card in dc.cards">
+    <trello-card task-data="card">
+      </trell-card>
+  </div>
+</div>
+<div class="col-md-4 m-t-20" >
+  <textarea class="form-control h-50" rows="5" id="card" placeholder="Enter card name" required></textarea>
+  <button class="btn btn-success btn-sm m-t-20" ng-click="dc.addCard();">Add Card</button>
+<div>

@@ -6,48 +6,23 @@
     .factory('CommonService', commonService);
 
   /** @ngInject */
-  function commonService($http) {
-    var API = 'http://api.debatabul.in';
+  function commonService($q) {
+    var cardData = [{
+      'Card 1': ['Task11', 'Task12', 'Task13', 'Task14', 'Task15', 'Task16']
+    }, {
+      'Card 2': ['Task21', 'Task22', 'Task23', 'Task24', 'Task25', 'Task26']
+    }, {
+      'Card 3': ['Task31', 'Task32', 'Task33', 'Task34', 'Task35', 'Task36']
+    }, {
+      'Card 4': ['Task41', 'Task42', 'Task43']
+    }];
     return {
-      getCatAll: function() {
-        return $http({
-          method: 'GET',
-          url: API + '/category/all'
-        });
-      },
-      createCat: function(category) {
-        return $http({
-          method: 'POST',
-          url: API + '/category/all',
-          parmas: {
-            category: category
-          }
-        });
-      },
-      createDashUser: function(user) {
-        return $http({
-          method: 'POST',
-          url: API + '/register/email',
-          parmas: {
-            ip: '1',
-            lat: '0',
-            lng: '0',
-            device_type: 'web',
-            email: user.email,
-            password: user.password,
-            first_name: user.firstName,
-            last_name: user.lastName,
-            username: (user.email).split('@')[0],
-          }
-        });
-      },
-      getUserDashAll: function() {
-        return $http({
-          method: 'GET',
-          url: API + '/user/dash/all'
-        });
-      },
-    };
+      getInitializedCards: function() {
+        var deffered = $q.defer();
+        deffered.resolve(cardData);
+        return deffered.promise;
+      }
+    }
   }
 
 })();

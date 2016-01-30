@@ -14,26 +14,14 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('dash.debate', {
-        url: '/debate',
-        templateUrl: 'app/main/debate/debate.html',
-        controller: 'DebateController',
+      .state('dash.main', {
+        url: '/main',
+        templateUrl: 'app/main/dashboard/dashboard.html',
+        controller: 'DashboardController',
         controllerAs: 'dc'
-      })
-      .state('dash.user', {
-        url: '/user',
-        templateUrl: 'app/main/user/user.html',
-        controller: 'UserController',
-        controllerAs: 'uc'
-      })
-      .state('dash.category', {
-        url: '/category',
-        templateUrl: 'app/main/category/category.html',
-        controller: 'CategoryController',
-        controllerAs: 'cc'
       });
 
-    $urlRouterProvider.otherwise('/debate');
+    $urlRouterProvider.otherwise('/main');
   }
 
 })();

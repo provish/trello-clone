@@ -1,0 +1,10 @@
+<div class="col-md-12 task-card">
+  <h3>{{cardName}}</h3>
+  <ul ui-sortable="sortAmongAll" ng-model="tasks" style="padding: 0;" class="taskCard">
+    <li ng-repeat="task in tasks">{{task}}</li>
+  </ul>
+  <textarea class="form-control h-50" rows="5" id="task" ng-if="showText" ng-model="newTask" ></textarea>
+  <button class="btn btn-default btn-sm m-t-20 m-b-20" ng-click="cancel();" ng-if="showText">Cancel</button>
+  <button class="btn btn-success btn-sm m-t-20 m-b-20" ng-click="addTask();" ng-if="showText">Add Task</button>
+  <button class="btn btn-link btn-sm" ng-click="showTextArea();" ng-if="!showText">Add Task</button>
+</div>

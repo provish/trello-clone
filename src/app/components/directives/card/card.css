@@ -1,0 +1,28 @@
+ul {
+  list-style-type: none;
+}
+li {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 5px;
+  cursor: move;
+  border-radius: 5px;
+}
+.task-card {
+  min-height: 100px;
+  border: solid #ccc 1px;
+  background-color: #ececec;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: move;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-b-20 {
+  margin-bottom: 20px;
+}
+.h-50 {
+  height: 50px !important;
+}

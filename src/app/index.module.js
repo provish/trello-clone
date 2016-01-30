@@ -6,6 +6,5 @@
       'ngResource',
       'ui.router',
       'ui.bootstrap',
-      'toastr']);
-
+      'ui.sortable']);
 })();
